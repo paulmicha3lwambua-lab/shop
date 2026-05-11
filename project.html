@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jersey King</title>
+    <Style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px; /* prevents content hiding fixed header*/
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0a0a0a;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.logo span {
+    color: #00d4ff; /* accent color for "King" */
+}
+
+.contact-info {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.contact-item a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-item a:hover {
+    color: #00d4ff;
+}
+
+.contact-icon {
+    font-size: 18px;
+}
+
+.cta-btn {
+    padding: 10px 18px;
+    background: #00d4ff;
+    color: #000;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.cta-btn:hover {
+    background: #00b8dd;
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px){
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        justify-content: center;
+        gap: 15px;
+    }
+    body {
+        padding-top: 140px; /* adjust for taller mobile header */
+    }
+}
+    </Style>
+</head>
+<body>
+    
+    <header class="header">
+     <div class="header-container">
+
+        <div class="logo">
+            Jersey <span>King</span>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-icon">&#xf095;</span>
+                <a href="tel:0745334974">0745334974</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">&#xf2b6;</span>
+                <a href="mailto:slickmike67@gmail.com">slickmike67@gmail.com</a>
+            </div>
+
+            <a href="tel:0745334974" class="cta-btn">Call Now</a>
+        </div>
+
+     </div>
+    </header>
+
+    <main>
+        <h1 style="padding: 40px 20px;">Welcom to Jersey King</h1>
+        <p>Feel free to browse through our inventory. If you are intrested in any of our merchendise, you can reach out to us using the contact info shown above.</p>
+    </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translate(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.product-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: #1d3557;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.product-btn:hover {
+    background: #457b9d;
+}
+
+
+
+/* For smaller screens */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align: center; margin-bottom: 20px;">Our Products</h1>
+
+    <div class="product-grid">
+
+        <!--product 1-->
+        <div class="product-card">
+            <a href="slider.html">
+            <img  src="jersey1.webp" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">jersey</h3>
+                <p class="product-price">Ksh 200</p>
+                <p class="product-description">Fiber-cloth howkey jersey perfect for running and daily wear</p>
+                <a href="footer.html" class="product-btn">Place Order</a>
+            </div>
+        </div>
+
+        <!--product 2-->
+         <div class="product-card">
+            <a href="slider.html">
+            <img src="jersey2.webp" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">jersey</h3>
+                <p class="product-price">Ksh 200</p>
+                <p class="product-description">Fiber-cloth howkey jersey perfect for running and daily wear</p>
+                <a href="footer.html" class="product-btn">Place Order</a>
+            </div>
+        </div>
+
+        <!--product 3-->
+         <div class="product-card">
+            <a href="slider.html">
+            <img src="jersey3.webp" class="product-image">
+            </a>
+            <div class="product-info">
+                <h3 class="product-title">jersey</h3>
+                <p class="product-price">Ksh 200</p>
+                <p class="product-description">Fiber-cloth howkey jersey perfect for running and daily wear</p>
+                <a href="footer.html" class="product-btn">Place Order</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.footer {
+    background: #1d3557;
+    color: #fff;
+    padding: 40px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px 1fr));
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1faee;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #a8dadc;
+    line-height: 1.7;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.contact-icon {
+    font-size: 18px;
+}
+
+.footer-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #457b9d;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #f1faee;
+}
+
+.footer-message .terms {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #a8dadc;
+    font-style: italic;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #457b9d;
+    font-size: 13px;
+    color: #a8dadc;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-item {
+        justify-content: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Your Page content Goes Here</h1>
+        <p>This is just to show the footer sticks to the bottom.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!--Contact Section-->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">&#xf095;</span>
+                    <a href="tel:0745334974">0745334974</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">&#xf2b6;</span>
+                    <a href="mailto:slickmike67@gmail.com">slickmike67@gmail.com</a>
+                </div>
+            </div>
+
+            <!--Quick Links-->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">Products</a></p>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Contact</a></p>
+            </div>
+
+            <!--Business Hours-->
+            <div class="footer-section">
+                <h3>Business Hours</h3>
+                <p>Mon - Fri: 8:00AM - 6:00 PM</p>
+                <p>Sat: 9:00 AM - 4:00 PM</p>
+                <p>Sun: Closed</p>
+            </div>
+
+            <!--Main Massage-->
+            <div class="footer-message">
+                <p>if you are interested in any of these products please reach out to us with the above contact details - we deliver our products in person.</p>
+                <a href="terms-conditions.html">
+                <span class="terms">Terms and conditions applied</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Mike Slick. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.footer {
+    background: #1d3557;
+    color: #fff;
+    padding: 40px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px 1fr));
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1faee;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #a8dadc;
+    line-height: 1.7;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.contact-icon {
+    font-size: 18px;
+}
+
+.footer-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #457b9d;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #f1faee;
+}
+
+.footer-message .terms {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #a8dadc;
+    font-style: italic;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #457b9d;
+    font-size: 13px;
+    color: #a8dadc;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-item {
+        justify-content: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Your Page content Goes Here</h1>
+        <p>This is just to show the footer sticks to the bottom.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!--Contact Section-->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">&#xf095;</span>
+                    <a href="tel:0745334974">0745334974</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">&#xf2b6;</span>
+                    <a href="mailto:slickmike67@gmail.com">slickmike67@gmail.com</a>
+                </div>
+            </div>
+
+            <!--Quick Links-->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">Products</a></p>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Contact</a></p>
+            </div>
+
+            <!--Business Hours-->
+            <div class="footer-section">
+                <h3>Business Hours</h3>
+                <p>Mon - Fri: 8:00AM - 6:00 PM</p>
+                <p>Sat: 9:00 AM - 4:00 PM</p>
+                <p>Sun: Closed</p>
+            </div>
+
+            <!--Main Massage-->
+            <div class="footer-message">
+                <p>if you are interested in any of these products please reach out to us with the above contact details - we deliver our products in person.</p>
+                <a href="terms-conditions.html">
+                <span class="terms">Terms and conditions applied</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Mike Slick. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
